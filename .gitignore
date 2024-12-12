@@ -160,3 +160,9 @@ cython_debug/
 #  and can be added to the global gitignore or merged into this file.  For a more nuclear
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
+
+# End of https://www.gitignore.io/api/python
+
+# don't include actual puzzle inputs
+# https://old.reddit.com/r/adventofcode/wiki/troubleshooting/no_asking_for_inputs
+input.txt
