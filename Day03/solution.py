@@ -1,14 +1,12 @@
 import re
 
 def part_1(fp):
-    pattern = "mul\([1-9]+,[1-9]+\)"
+    pattern = "mul\([0-9]+,[0-9]+\)"
     sum = 0
     with open(fp) as f:
         for line in f:
             commands = re.findall(pattern, line)
-            print(commands)
             for command in commands:
-                print(command, sum)
                 sum += eval(command)
     
     return sum
