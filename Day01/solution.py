@@ -32,10 +32,20 @@ def part_1(fp: str) -> int:
 
 def part_2(fp: str) -> int:
     """
-    
+    Day 1 Part 2 of Advent of Code 2024. Calculates similarity
+    score between two lists using frequency in second list multiplied
+    by corresponding numbers in first list and returns sum of all
+    scores added up
+
+    Args:
+        fp (string): input filepath
+    Returns:
+        int: similarity score between two lists
+
     >>> part_2('tests/input_test.txt')
     31
     """
+    
     first_list = []
     second_list = []
     second_counts = {}

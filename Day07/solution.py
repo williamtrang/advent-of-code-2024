@@ -29,6 +29,7 @@ def part_1(fp: str) -> int:
 
             if valid_target(values, target):
                 total_sum += target
+                
     return total_sum
 
 def part_2(fp: str) -> int:
@@ -48,7 +49,7 @@ def part_2(fp: str) -> int:
     >>> part_2('tests/test_input.txt')
     11387
     """
-    
+
     total_sum = 0
 
     with open(fp) as f:
@@ -60,6 +61,7 @@ def part_2(fp: str) -> int:
 
             if valid_target_concats(values, target):
                 total_sum += target
+
     return total_sum
 
 def valid_target(nums: list[int], target: int) -> bool:
