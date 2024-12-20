@@ -11,6 +11,7 @@ def part_1(fp: str) -> int:
 
     Args:
         fp (string): input filepath
+
     Returns:
         int: total of all reachable targets
 
@@ -29,7 +30,7 @@ def part_1(fp: str) -> int:
 
             if valid_target(values, target):
                 total_sum += target
-                
+
     return total_sum
 
 def part_2(fp: str) -> int:
@@ -43,6 +44,7 @@ def part_2(fp: str) -> int:
 
     Args:
         fp (string): input filepath
+
     Returns:
         int: total of all reachable targets
     
@@ -73,6 +75,7 @@ def valid_target(nums: list[int], target: int) -> bool:
     Args:
         nums (list): list of numbers
         target (int): target number to reach
+
     Returns:
         bool: whether or not the list can become the target number
 
@@ -111,6 +114,7 @@ def valid_target_concats(nums: list[int], target: int) -> bool:
     Args:
         nums (list): list of numbers
         target (int): target number to reach
+
     Returns:
         bool: whether or not the list can become the target number
     """
@@ -130,8 +134,10 @@ def perform_list_operations(operations: tuple[str], nums: list[int]) -> int:
     Args:
         operations (tuple): tuple of operators
         nums (list): list of numbers to perform operations on
+
     Returns:
         int: total after all operations have been performed
+
     Raises:
         AssertionError: if operations list contains invalid operators 
 
@@ -163,6 +169,7 @@ def add(a, b):
     Args:
         a (num): first number
         b (num): second number
+
     Returns:
         num: sum of a and b
 
@@ -185,6 +192,7 @@ def mul(a, b):
     Args:
         a (num): first number
         b (num): second number
+
     Returns:
         num: product of a and b
 
@@ -207,6 +215,7 @@ def concatenation(a, b) -> str:
     Args:
         a: first input
         b: second input
+
     Returns:
         string: concatenated string of a and b
 

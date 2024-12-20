@@ -7,6 +7,7 @@ def part_1(fp: str) -> int:
 
     Args:
         fp (string): input filepath
+
     Returns:
         int: sum of all mul commands
 
@@ -32,6 +33,7 @@ def mul(a, b):
     Args:
         a (num): first number
         b (num): second number
+
     Returns:
         num: product of a and b
 
@@ -55,6 +57,7 @@ def part_2(fp: str) -> int:
 
     Args:
         fp (string): input filepath
+
     Returns:
         int: sum of all do mul commands
     

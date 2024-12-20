@@ -5,6 +5,7 @@ def part_1(fp: str) -> int:
 
     Args:
         fp (string): input filepath
+
     Returns:
         int: total distance between two sorted lists
 
@@ -39,6 +40,7 @@ def part_2(fp: str) -> int:
 
     Args:
         fp (string): input filepath
+
     Returns:
         int: similarity score between two lists
 
