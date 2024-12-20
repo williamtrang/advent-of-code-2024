@@ -1,4 +1,17 @@
-def part_1(fp):
+def part_1(fp: str) -> int:
+    """
+    Day 1 Part 1 of Advent of Code 2024. Returns the total
+    distance of corresponding elements between two lists of sorted numbers.
+
+    Args:
+        fp (string): input filepath
+    Returns:
+        int: total distance between two sorted lists
+
+    >>> part_1('tests/input_test.txt')
+    11
+    """
+
     first_list = []
     second_list = []
     distance = 0
@@ -17,7 +30,12 @@ def part_1(fp):
     
     return distance
 
-def part_2(fp):
+def part_2(fp: str) -> int:
+    """
+    
+    >>> part_2('tests/input_test.txt')
+    31
+    """
     first_list = []
     second_list = []
     second_counts = {}

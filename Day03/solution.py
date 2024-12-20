@@ -1,14 +1,14 @@
 import re
 
-def part_1(fp):
+def part_1(fp: str) -> int:
     """
     Day 3 Part 1 of Advent of Code 2024. Takes in "corrupted memory"
     and outputs the sum of all mul commands in the memory.
 
     Args:
-        fp: input filepath
+        fp (string): input filepath
     Returns:
-        sum of all mul commands
+        int: sum of all mul commands
 
     >>> part_1('tests/input_test.txt')
     161
@@ -30,10 +30,10 @@ def mul(a, b):
     Returns product of two inputs a and b
 
     Args:
-        a: first number
-        b: second number
+        a (num): first number
+        b (num): second number
     Returns:
-        product of a and b
+        num: product of a and b
 
     >>> mul(6, 4)
     24
@@ -44,13 +44,19 @@ def mul(a, b):
     >>> mul(-6, 24)
     -144
     """
+    
     return a * b
 
-def part_2(fp):
+def part_2(fp: str) -> int:
     """
     Day 3 Part 2 of Advent of Code 2024. Takes in "corrupted memory"
     and outputs the sum of all mul commands, taking into account "do"
     and "don't" commands.
+
+    Args:
+        fp (string): input filepath
+    Returns:
+        int: sum of all do mul commands
     
     >>> part_2('tests/input_test.txt')
     48
