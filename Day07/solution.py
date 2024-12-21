@@ -1,5 +1,4 @@
 from itertools import product
-from tqdm import tqdm
 
 def part_1(fp: str) -> int:
     """
@@ -119,7 +118,7 @@ def valid_target_concats(nums: list[int], target: int) -> bool:
         bool: whether or not the list can become the target number
     """
 
-    for ops in tqdm(product(['+', '*', '||'], repeat = (len(nums) - 1))):
+    for ops in product(['+', '*', '||'], repeat = (len(nums) - 1)):
         total = perform_list_operations(ops, nums)
         if total == target:
             return True
