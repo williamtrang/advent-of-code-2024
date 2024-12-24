@@ -1,6 +1,15 @@
 def part_1(fp: str) -> int:
     """
+    Day 8 Part 1 of Advent of Code 2024. Takes in a map
+    with antenna on the map and outputs the number of
+    unique locations for antinodes between the antenna
+
+    Args:
+        fp (string): input filepath
     
+    Returns:
+        int: number of unique antinode locations
+
     >>> part_1('tests/input_test.txt')
     14
     """ 
@@ -35,7 +44,17 @@ def part_1(fp: str) -> int:
 
 def part_2(fp: str) -> int:
     """
+    Day 8 Part 2 of Advent of Code 2024. Takes in a map
+    with antenna on the map and outputs the number of unique
+    locations for antinodes between the antenna, with more
+    than one antinode per pair of antenna being acceptable
+
+    Args:
+        fp (string): input filepath
     
+    Returns:
+        int: number of unique antinode locations
+
     >>> part_2('tests/input_test.txt')
     34
 
@@ -71,9 +90,10 @@ def part_2(fp: str) -> int:
     
     return num_antinodes
 
-def find_antinodes(points):
+def find_antinodes(points: list) -> list:
     """
-    
+    Finds antinodes from a list of points. Each antinode
+
     >>> res = find_antinodes([(4, 3), (5, 5), (8, 4)])
     >>> set(res) == set([(3, 1), (6, 7), (2, 6), (0, 2), (11, 3), (12, 5)])
     True
@@ -86,7 +106,7 @@ def find_antinodes(points):
 
     return antinodes
     
-def find_all_antinodes(points, map_dims):
+def find_all_antinodes(points: list, map_dims: tuple) -> list:
 
     antinodes = []
 
@@ -96,9 +116,17 @@ def find_all_antinodes(points, map_dims):
 
     return antinodes
 
-def calc_antinodes(a, b):
+def calc_antinodes(a: tuple, b: tuple) -> list:
     """
+    Calculate the possible antinodes between two points a and b
+
+    Args:
+        a (tuple): first point
+        b (tuple): second point
     
+    Returns:
+        list: list of possible antinodes for the two input points
+
     >>> calc_antinodes((4, 3), (5, 5))
     [(3, 1), (6, 7)]
     """
@@ -114,9 +142,22 @@ def calc_antinodes(a, b):
 
     return antinodes
 
-def calc_all_antinodes(a, b, map_dims):
+def calc_all_antinodes(a: tuple, b: tuple, map_dims: tuple) -> list:
     """
+    Calculates all possible antinodes between points a and b,
+    allowing for more than two within the line. Antinodes are generated
+    until one is out of the boundaries of the map
+
+    Args:
+        a (tuple): first point
+        b (tuple): second point
+        map_dims (tuple): dimensions of map
     
+    Returns:
+        list: list of all possible antinodes between two points that
+        fit within map dimensions
+
+    >>>
     
     """
     antinodes = set([])
@@ -134,8 +175,17 @@ def calc_all_antinodes(a, b, map_dims):
 
     return list(antinodes)
 
-def out_of_bounds(point, map_dims):
+def out_of_bounds(point: tuple, map_dims: tuple) -> bool:
     """
+    Determines whether a point is out of the boundaries of
+    a map with given dimensions
+
+    Args:
+        point (tuple): point to determine in or out of bounds
+        map_dims (tuple): dimensions of map
+    
+    Returns:
+        bool: whether or not the point is within the map
     
     >>> out_of_bounds((3, 1), (10, 10))
     False
@@ -155,9 +205,17 @@ def out_of_bounds(point, map_dims):
 
     return (point[0] > map_dims[0]) or (point[1] > map_dims[1]) or (point[0] < 0) or (point[1] < 0)
 
-def add_tups(a, b):
+def add_tups(a, b) -> tuple:
     """
-    Adds two tuples of numbers
+    Adds two iterables of numbers and returns the
+    result as a tuple
+
+    Args:
+        a: first iterable of numbers
+        b: second iterable of numbers
+
+    Returns:
+
     """
 
     assert len(a) == len(b)
@@ -168,7 +226,7 @@ def add_tups(a, b):
 
     return tuple(res)
 
-def subtract_tups(a, b):
+def subtract_tups(a, b) -> tuple:
     assert len(a) == len(b)
 
     res = []
