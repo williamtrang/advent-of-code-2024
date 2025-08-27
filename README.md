@@ -1,10 +1,21 @@
-# Advent of Code 2024 - William Trang
+# Advent of Code 2024 – William Trang
 
-My repository for [Advent of Code 2024](https://adventofcode.com/). All solutions are my own and mostly documented. Each solution was done in Python, and every problem has its own folder titled `DayXX`. Each problem folder has the following structure:
+This repository contains my personal solutions for [Advent of Code 2024](https://adventofcode.com/2024), written entirely in **Python**. All solutions are my own and are mostly documented.
+
+Each day's problem is organized into its own folder, named `DayXX`, and follows the structure below:
 - DayXX/
   - tests/
     - input_test.txt
     - ...
   - solution.py
 
-`solution.py` contains the source code for the solution, with `part_1` and `part_2` functions denoting the solutions of part 1 and 2 of the problem respectively. The `tests` directory contains sample inputs I used to verify my functions.
+## 📄 File Structure
+
+- **`solution.py`**
+  - Implements both parts of the problem using:
+    - `part_1()` – Solution to Part 1
+    - `part_2()` – Solution to Part 2
+
+- **`tests/`**
+  - Contains input files (e.g., `input_test.txt`) used for local testing and validation.
+
