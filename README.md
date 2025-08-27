@@ -9,13 +9,11 @@ Each day's problem is organized into its own folder, named `DayXX`, and follows 
     - ...
   - solution.py
 
-## 📄 File Structure
-
-- **`solution.py`**
+**`solution.py`**
   - Implements both parts of the problem using:
     - `part_1()` – Solution to Part 1
     - `part_2()` – Solution to Part 2
 
-- **`tests/`**
+**`tests/`**
   - Contains input files (e.g., `input_test.txt`) used for local testing and validation.
 
